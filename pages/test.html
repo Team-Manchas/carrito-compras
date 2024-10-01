@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pruebas</title>
+    <style>
+      .calculadora {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+      }
+
+      .tabla_calculadora {
+        width: 60%;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="calculadora">
+      <table class="tabla_calculadora">
+        <thead>
+          <tr>
+            <th colspan="4">
+              <span id="resultado">0</span>
+            </th>
+          </tr>
+          <tr>
+            <th>
+              <button onclick="poner_simbolo('+')">+</button>
+            </th>
+            <th>
+              <button onclick="poner_simbolo('-')">-</button>
+            </th>
+            <th>
+              <button onclick="poner_simbolo('*')">x</button>
+            </th>
+            <th>
+              <button onclick="poner_simbolo('/')">/</button>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><button onclick="poner_valor(7)">7</button></td>
+            <td><button onclick="poner_valor(8)">8</button></td>
+            <td><button onclick="poner_valor(9)">9</button></td>
+            <td rowspan="2"><button onclick="limpiar()">CE</button></td>
+          </tr>
+          <tr>
+            <td><button onclick="poner_valor(4)">4</button></td>
+            <td><button onclick="poner_valor(5)">5</button></td>
+            <td><button onclick="poner_valor(6)">6</button></td>
+          </tr>
+          <tr>
+            <td><button onclick="poner_valor(1)">1</button></td>
+            <td><button onclick="poner_valor(2)">2</button></td>
+            <td><button onclick="poner_valor(3)">3</button></td>
+            <td><button onclick="ejecutar()">=</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <script src="../assets/js/calculadora.js"></script>
+  </body>
+</html>
